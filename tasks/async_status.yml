@@ -4,7 +4,7 @@
   async_status:
     jid: "{{ async_result.ansible_job_id }}"
   failed_when: result | failed
-  changed_when: result | changed
+  changed_when: result is changed
   register: result
   until: result.finished | bool
   # Guarantee at least one retry
