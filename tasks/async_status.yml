@@ -10,4 +10,3 @@
   # Guarantee at least one retry
   retries: "{{ (git_op_timeout|int / git_op_status_delay|int) | round(method='ceil')|int }}"
   delay: "{{ git_op_status_delay|int }}"
-.
